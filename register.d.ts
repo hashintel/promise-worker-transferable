@@ -6,7 +6,7 @@
 declare function registerPromiseWorker<TMessageIn = any, TMessageOut = any>(
   callback: (
     message: TMessageIn,
-    messageList: any[]
+    withTransferList: (resMessage: any, transferList: any[]) => void
   ) => Promise<TMessageOut> | TMessageOut
 ): void;
 
